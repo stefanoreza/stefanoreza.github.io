@@ -3,14 +3,18 @@
 function convert() {
   const celsius = parseFloat(document.getElementById('celsius').value);
   const fahrenheit = (celsius * 9/5) + 32;
-  document.getElementById('fahrenheit').value = fahrenheit;
-  document.getElementById('kalkulasi').value = `${celsius}°C * (9/5) + 32 = ${fahrenheit}°F`;
+  if (fahrenheit == " " || isNaN(fahrenheit)) {
+    alert('Masukkan angka suhu dalam Celsius!');
+  } else {
+    document.getElementById('fahrenheit').value = fahrenheit;
+    document.getElementById('kalkulasi').value = `${celsius}°C * (9/5) + 32 = ${fahrenheit}°F`;
+  }
 }
 
 function reset() {
-  document.getElementById('celsius').value = '';
-  document.getElementById('fahrenheit').value = '';
-  document.getElementById('kalkulasi').value = '';
+  document.getElementById('fahrenheit').value = ' ';
+  document.getElementById('kalkulasi').value = ' ';
+  document.getElementById('celsius').value = ' ';
 }
 
 function reverse() {

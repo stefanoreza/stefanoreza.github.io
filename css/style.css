@@ -44,3 +44,19 @@ textarea {
     font-size: 16px;
     resize: none;
 }
+
+h1 {
+    color: white;
+    text-shadow: 
+        0 0 10px cyan,
+        0 0 20px rgb(0, 255, 55),
+        0 0 40px rgb(0, 255, 55),
+        0 0 80px cyan;
+}
+
+@media only screen and (max-width:600px) {
+    body {    
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
